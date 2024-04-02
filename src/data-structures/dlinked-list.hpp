@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <optional>
-#include <stdio.h>
 
 class DLinkedListNode {
 public:
