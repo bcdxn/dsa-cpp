@@ -11,34 +11,39 @@
 #include <iostream>
 #include <optional>
 
+template <typename T>
 class DLinkedListNode {
 public:
-    DLinkedListNode* pNext;
-    DLinkedListNode* pPrev;
-    int element;
-    DLinkedListNode(int elem);
+    DLinkedListNode<T>* pNext;
+    DLinkedListNode<T>* pPrev;
+    T element;
+    DLinkedListNode(T elem);
     ~DLinkedListNode();
 };
 
+template <typename T>
 class DLinkedList {
 private:
     int size;
-    DLinkedListNode* reverseRecursive(DLinkedListNode* head);
+    DLinkedListNode<T>* reverseRecursive(DLinkedListNode<T>* head);
 public:
-    DLinkedListNode* pHead;
-    DLinkedListNode* pTail;
+    DLinkedListNode<T>* pHead;
+    DLinkedListNode<T>* pTail;
     DLinkedList();
     ~DLinkedList();
     int getSize();
-    void addHead(int elem);
-    void addTail(int elem);
-    std::optional<int> removeHead();
-    std::optional<int> removeTail();
+    void addHead(T elem);
+    void addTail(T elem);
+    std::optional<T> removeHead();
+    std::optional<T> removeTail();
     void reverse();
     void reverseRecursive();
     void printInReverse();
 };
 
-std::ostream& operator<<(std::ostream& os, DLinkedList& dll);
+template <typename T>
+std::ostream& operator<<(std::ostream& os, DLinkedList<T>& dll);
+
+#include "dlinked-list.tpp"
 
 #endif /* dlinked_list_hpp */

@@ -11,29 +11,34 @@
 #include <stdio.h>
 #include <optional>
 
+template <typename T>
 class LinkedListNode {
 public:
-    int element;
+    T element;
     LinkedListNode* pNext;
-    LinkedListNode(int element);
+    LinkedListNode(T element);
     ~LinkedListNode();
 };
 
+template <typename T>
 class LinkedList {
 private:
     int size;
-    LinkedListNode* reverseRecursive(LinkedListNode* head);
+    LinkedListNode<T>* reverseRecursive(LinkedListNode<T>* head);
 public:
-    LinkedListNode* pHead;
+    LinkedListNode<T>* pHead;
     LinkedList();
     ~LinkedList();
     int getSize();
-    void addHead(int elem);
-    std::optional<int> removeHead();
+    void addHead(T elem);
+    std::optional<T> removeHead();
     void reverse();
     void reverseRecursive();
 };
 
-std::ostream& operator<<(std::ostream& os, LinkedList &ll);
+template<typename T>
+std::ostream& operator<<(std::ostream& os, LinkedList<T> &ll);
+
+#include "linked-list.tpp"
 
 #endif /* linked_list_hpp */

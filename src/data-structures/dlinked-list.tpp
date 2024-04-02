@@ -10,38 +10,44 @@
 
 #include "dlinked-list.hpp"
 
-DLinkedListNode::DLinkedListNode(int elem): element(elem) {
+template <typename T>
+DLinkedListNode<T>::DLinkedListNode(T elem): element(elem) {
     pNext = nullptr;
     pPrev = nullptr;
 }
 
-DLinkedListNode::~DLinkedListNode() {
+template <typename T>
+DLinkedListNode<T>::~DLinkedListNode() {
     std::cout << "[DEBUG] " << "DLinkedListNode(" << element << ") Destructor called\n";
     // TODO
 }
 
-DLinkedList::DLinkedList() {
+template <typename T>
+DLinkedList<T>::DLinkedList() {
     pHead = nullptr;
     pTail = nullptr;
     size = 0;
 }
 
-DLinkedList::~DLinkedList() {
+template <typename T>
+DLinkedList<T>::~DLinkedList() {
     std::cout << "[DEBUG] " << "DLinkedList Destructor called\n";
     // TODO
 }
 
-int DLinkedList::getSize() {
+template <typename T>
+int DLinkedList<T>::getSize() {
     return size;
 }
 
 // Add an element at the head of the list
-void DLinkedList::addHead(int elem) {
+template <typename T>
+void DLinkedList<T>::addHead(T elem) {
     if (!pHead) {
-        pHead = new DLinkedListNode(elem);
+        pHead = new DLinkedListNode<T>(elem);
         pTail = pHead;
     } else {
-        DLinkedListNode* tmp = pHead;
+        DLinkedListNode<T>* tmp = pHead;
         pHead = new DLinkedListNode(elem);
         pHead->pNext = tmp;
         tmp->pPrev = pHead;
@@ -51,12 +57,13 @@ void DLinkedList::addHead(int elem) {
 }
 
 // Add an element at the end of the list
-void DLinkedList::addTail(int elem) {
+template <typename T>
+void DLinkedList<T>::addTail(T elem) {
     if (!pTail) {
         // If the list is empty, adding to the head and tail are equivalent
         addHead(elem);
     } else {
-        DLinkedListNode* tmp = pTail;
+        DLinkedListNode<T>* tmp = pTail;
         pTail = new DLinkedListNode(elem);
         pTail->pPrev = tmp;
         tmp->pNext = pTail;
@@ -65,7 +72,8 @@ void DLinkedList::addTail(int elem) {
 }
 
 // Remove an element from the beginning of the list
-std::optional<int> DLinkedList::removeHead() {
+template <typename T>
+std::optional<T> DLinkedList<T>::removeHead() {
     if (!pHead) {
         // The list is empty so we can return
         return {};
@@ -74,9 +82,9 @@ std::optional<int> DLinkedList::removeHead() {
     // The list is not empty so we can remove the head and return its element
     
     // store the element at the current head so that it can be returned
-    int element = pHead->element;
+    T element = pHead->element;
     
-    DLinkedListNode* tmp = pHead;
+    DLinkedListNode<T>* tmp = pHead;
     pHead = pHead->pNext;
     size--;
     
@@ -97,14 +105,15 @@ std::optional<int> DLinkedList::removeHead() {
 }
 
 // Remove an element from the end of the list
-std::optional<int> DLinkedList::removeTail() {
+template <typename T>
+std::optional<T> DLinkedList<T>::removeTail() {
     if (!pTail) {
         // The list is empty so we can return
         return {};
     }
     
-    int element = pTail->element;
-    DLinkedListNode* tmp = pTail;
+    T element = pTail->element;
+    DLinkedListNode<T>* tmp = pTail;
     pTail = pTail->pPrev;
     size--;
     
@@ -126,33 +135,26 @@ std::optional<int> DLinkedList::removeTail() {
     return element;
 }
 
-
-void DLinkedList::reverse() {
-    DLinkedListNode* current = pHead;
-    DLinkedListNode* previous = nullptr;
+template <typename T>
+void DLinkedList<T>::reverse() {
+    DLinkedListNode<T>* current = pHead;
+    
+    pTail = pHead; // we know the current head will become the tail
     
     while (current) {
-        // store next
-        DLinkedListNode* tmp = current->pNext;
-        // process node
-        current->pNext = previous;
+        // store
+        DLinkedListNode<T>* tmp = current->pNext;
+        // process
+        current->pNext = current->pPrev;
+        current->pPrev = tmp;
         pHead = current;
-        current->pPrev = nullptr;
-        
-        if (previous) {
-            previous->pPrev = current;
-        } else {
-            pTail = current;
-        }
-        
         // iterate
-        previous = current;
         current = tmp;
     }
-    return;
 }
 
-DLinkedListNode* DLinkedList::reverseRecursive(DLinkedListNode* head) {
+template <typename T>
+DLinkedListNode<T>* DLinkedList<T>::reverseRecursive(DLinkedListNode<T>* head) {
     // base case 1 (an empty list is sorted)
     if (!head) { return head; }
     // base case 2 (a list of size 1 is sorted)
@@ -163,7 +165,7 @@ DLinkedListNode* DLinkedList::reverseRecursive(DLinkedListNode* head) {
     }
     
     // reverse everything to the nezt of the current node
-    DLinkedListNode* newHead = reverseRecursive(head->pNext);
+    DLinkedListNode<T>* newHead = reverseRecursive(head->pNext);
     head->pNext->pNext = head; // reverse current node
     head->pPrev = head->pNext;
     // The current node becomes the tail
@@ -173,17 +175,19 @@ DLinkedListNode* DLinkedList::reverseRecursive(DLinkedListNode* head) {
     return newHead;
 }
 
-void DLinkedList::reverseRecursive() {
+template <typename T>
+void DLinkedList<T>::reverseRecursive() {
     pHead = reverseRecursive(pHead);
 }
 
-void DLinkedList::printInReverse() {
+template <typename T>
+void DLinkedList<T>::printInReverse() {
     using std::cout;
     
     cout << "---------------------------------------------------------------------------\n";
     cout << "ensure we can still traverse from tail to head\n";
     
-    DLinkedListNode* node = pTail;
+    DLinkedListNode<T>* node = pTail;
     
     while (node) {
         cout << node->element << " ";
@@ -192,10 +196,11 @@ void DLinkedList::printInReverse() {
     cout << '\n';
 }
 
-std::ostream& operator<<(std::ostream& os, DLinkedList& dll) {
+template <typename T>
+std::ostream& operator<<(std::ostream& os, DLinkedList<T>& dll) {
     using std::cout;
     
-    DLinkedListNode* pNode = dll.pHead;
+    DLinkedListNode<T>* pNode = dll.pHead;
     
     cout << "dll: size("
         << dll.getSize()

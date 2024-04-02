@@ -15,7 +15,7 @@
 //int main(int argc, const char * argv[]) {
 //    using std::cout;
 //    
-//    LinkedList ll{};
+//    LinkedList<int> ll{};
 //    cout << ll << '\n';
 //    
 //    cout << "---------------------------------------------------------------------------\n";
@@ -77,7 +77,7 @@
 int main(int argc, const char * argv[]) {
     using std::cout;
 
-    DLinkedList dll{};
+    DLinkedList<int> dll{};
     cout << dll << '\n';
 
     cout << "---------------------------------------------------------------------------\n";
@@ -140,14 +140,13 @@ int main(int argc, const char * argv[]) {
     
     dll.printInReverse();
     
-    cout << '\n';
-    
     cout << "---------------------------------------------------------------------------\n";
     cout << "Reversing the list recursively:\n";
     dll.reverseRecursive();
     cout << dll << '\n';
     cout << "---------------------------------------------------------------------------\n";
-
+    
+    dll.printInReverse();
 
     return 0;
 }

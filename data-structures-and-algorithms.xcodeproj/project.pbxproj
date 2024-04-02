@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BBE034BB2BBA2EAA0062D008 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034BA2BBA2EAA0062D008 /* main.cpp */; };
-		BBE034CC2BBA35EC0062D008 /* linked-list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034CA2BBA35EC0062D008 /* linked-list.cpp */; };
-		BBE034CF2BBA4CA50062D008 /* dlinked-list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034CD2BBA4CA50062D008 /* dlinked-list.cpp */; };
+		BBE034CC2BBA35EC0062D008 /* linked-list.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034CA2BBA35EC0062D008 /* linked-list.tpp */; };
+		BBE034CF2BBA4CA50062D008 /* dlinked-list.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034CD2BBA4CA50062D008 /* dlinked-list.tpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +28,9 @@
 		BBC3819A2BBC353E0087666F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BBE034B72BBA2EAA0062D008 /* data-structures-and-algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "data-structures-and-algorithms"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE034BA2BBA2EAA0062D008 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		BBE034CA2BBA35EC0062D008 /* linked-list.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "linked-list.cpp"; sourceTree = "<group>"; };
+		BBE034CA2BBA35EC0062D008 /* linked-list.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = "linked-list.tpp"; sourceTree = "<group>"; };
 		BBE034CB2BBA35EC0062D008 /* linked-list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "linked-list.hpp"; sourceTree = "<group>"; };
-		BBE034CD2BBA4CA50062D008 /* dlinked-list.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "dlinked-list.cpp"; sourceTree = "<group>"; };
+		BBE034CD2BBA4CA50062D008 /* dlinked-list.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = "dlinked-list.tpp"; sourceTree = "<group>"; };
 		BBE034CE2BBA4CA50062D008 /* dlinked-list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "dlinked-list.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,9 +74,9 @@
 		BBE034C62BBA30720062D008 /* data-structures */ = {
 			isa = PBXGroup;
 			children = (
-				BBE034CA2BBA35EC0062D008 /* linked-list.cpp */,
+				BBE034CA2BBA35EC0062D008 /* linked-list.tpp */,
 				BBE034CB2BBA35EC0062D008 /* linked-list.hpp */,
-				BBE034CD2BBA4CA50062D008 /* dlinked-list.cpp */,
+				BBE034CD2BBA4CA50062D008 /* dlinked-list.tpp */,
 				BBE034CE2BBA4CA50062D008 /* dlinked-list.hpp */,
 			);
 			path = "data-structures";
@@ -139,8 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBE034CC2BBA35EC0062D008 /* linked-list.cpp in Sources */,
-				BBE034CF2BBA4CA50062D008 /* dlinked-list.cpp in Sources */,
+				BBE034CC2BBA35EC0062D008 /* linked-list.tpp in Sources */,
+				BBE034CF2BBA4CA50062D008 /* dlinked-list.tpp in Sources */,
 				BBE034BB2BBA2EAA0062D008 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
