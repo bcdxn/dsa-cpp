@@ -28,6 +28,7 @@ public:
     BSTNode<T>* pRoot = nullptr;
     BST<T>();
     ~BST<T>();
+//    insert(T elem);
 };
 
 #include "bst.tpp"

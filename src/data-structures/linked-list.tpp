@@ -10,36 +10,36 @@
 
 #include "linked-list.hpp"
 
-template <ComparableAndPrintable T>
+template <Printable T>
 LinkedListNode<T>::LinkedListNode(T elem) : element(elem) {
     pNext = nullptr;
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 LinkedListNode<T>::~LinkedListNode() {
     std::cout << "[DEBUG] " << "LinkedListNode(" << element << ") Destructor called\n";
     pNext = nullptr;
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 LinkedList<T>::LinkedList() {
     pHead = nullptr;
     size = 0;
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 LinkedList<T>::~LinkedList() {
     std::cout << "[DEBUG] " << "LinkedList Destructor called\n";
     // TODO
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 int LinkedList<T>::getSize() {
     return size;
 }
 
 // Add a node to the beginning of the linked list
-template <ComparableAndPrintable T>
+template <Printable T>
 void LinkedList<T>::addHead(T elem) {
     LinkedListNode<T>* newHead = new LinkedListNode<T>(elem);
     newHead->pNext = pHead;
@@ -47,7 +47,7 @@ void LinkedList<T>::addHead(T elem) {
     size++;
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 std::optional<T> LinkedList<T>::removeHead() {
     // Get the current head (the node that will be removed)
     LinkedListNode<T>* tmp = pHead;
@@ -70,7 +70,7 @@ std::optional<T> LinkedList<T>::removeHead() {
 // in-place reversal
 // 30 -> 20 -> 10 -> null
 // 10 -> 20 -> 30 -> null
-template <ComparableAndPrintable T>
+template <Printable T>
 void LinkedList<T>::reverse() {
     // Start at the head
     LinkedListNode<T>* current = pHead;
@@ -89,7 +89,7 @@ void LinkedList<T>::reverse() {
     }
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 LinkedListNode<T>* LinkedList<T>::reverseRecursive(LinkedListNode<T>* head) {
     // base case 1 (an empty list is sorted)
     if (!head) { return head; }
@@ -108,13 +108,13 @@ LinkedListNode<T>* LinkedList<T>::reverseRecursive(LinkedListNode<T>* head) {
     return newHead;
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 void LinkedList<T>::reverseRecursive() {
     pHead = reverseRecursive(pHead);
 }
 
 // Override the '<<' operator so we can easily print the LinkedList
-template <ComparableAndPrintable T>
+template <Printable T>
 std::ostream& operator<<(std::ostream& os, LinkedList<T> &ll) {
     using std::cout;
     

@@ -13,7 +13,7 @@
 
 #include "comparable-printable.hpp"
 
-template <ComparableAndPrintable T>
+template <Printable T>
 class DLinkedListNode {
 public:
     DLinkedListNode<T>* pNext;
@@ -23,7 +23,7 @@ public:
     ~DLinkedListNode();
 };
 
-template <ComparableAndPrintable T>
+template <Printable T>
 class DLinkedList {
 private:
     int size;
@@ -43,7 +43,7 @@ public:
     void printInReverse();
 };
 
-template <ComparableAndPrintable T>
+template <Printable T>
 std::ostream& operator<<(std::ostream& os, DLinkedList<T>& dll);
 
 #include "dlinked-list.tpp"

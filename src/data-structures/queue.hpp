@@ -11,10 +11,10 @@
 #include <optional>
 #include <string>
 
-#include "dlinked-list.hpp"
 #include "comparable-printable.hpp"
+#include "dlinked-list.hpp"
 
-template <ComparableAndPrintable T>
+template <Printable T>
 class Queue {
 private:
     DLinkedList<T>* ll = nullptr;

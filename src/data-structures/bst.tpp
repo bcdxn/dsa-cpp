@@ -8,6 +8,7 @@
 #include <iostream>
 
 #include "bst.hpp"
+#include "comparable-printable.hpp"
 
 template <ComparableAndPrintable T>
 BSTNode<T>::BSTNode() {}

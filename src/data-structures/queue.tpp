@@ -10,31 +10,32 @@
 #include <optional>
 #include <string>
 
+#include "comparable-printable.hpp"
 #include "dlinked-list.hpp"
 #include "queue.hpp"
 
 
-template <ComparableAndPrintable T>
+template <Printable T>
 Queue<T>::Queue() {
     ll = new DLinkedList<T>();
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 Queue<T>::~Queue() {
     std::cout << "[DEBUG]" << "Destroying queue\n";
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 int Queue<T>::getDepth() {
     return ll->getSize();
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 void Queue<T>::enqueue(T element) {
     ll->addHead(element);
 }
 
-template <ComparableAndPrintable T>
+template <Printable T>
 std::optional<T> Queue<T>::dequeue() {
     return ll->removeTail();
 }

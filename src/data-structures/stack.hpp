@@ -12,9 +12,10 @@
 #include <optional>
 #include <string>
 
+#include "comparable-printable.hpp"
 #include "linked-list.hpp"
 
-template <typename T>
+template <Printable T>
 class Stack {
 private:
     LinkedList<T>* ll = nullptr;

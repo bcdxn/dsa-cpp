@@ -12,7 +12,7 @@
 
 #include "comparable-printable.hpp"
 
-template <ComparableAndPrintable T>
+template <Printable T>
 class LinkedListNode {
 public:
     T element;
@@ -21,7 +21,7 @@ public:
     ~LinkedListNode();
 };
 
-template <ComparableAndPrintable T>
+template <Printable T>
 class LinkedList {
 private:
     int size;
@@ -37,7 +37,7 @@ public:
     void reverseRecursive();
 };
 
-template<ComparableAndPrintable T>
+template<Printable T>
 std::ostream& operator<<(std::ostream& os, LinkedList<T> &ll);
 
 #include "linked-list.tpp"

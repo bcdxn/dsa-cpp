@@ -9,30 +9,31 @@
 #include <optional>
 #include <string>
 
+#include "comparable-printable.hpp"
 #include "stack.hpp"
 
-template <typename T>
+template <Printable T>
 Stack<T>::Stack() {
     ll = new LinkedList<T>;
 }
 
-template <typename T>
+template <Printable T>
 Stack<T>::~Stack() {
     std::cout << "Destructing Stack" << std::endl;
     delete ll;
 }
 
-template <typename T>
+template <Printable T>
 int Stack<T>::getHeight() {
     return ll->getSize();
 }
 
-template <typename T>
+template <Printable T>
 void Stack<T>::push(T element) {
     ll->addHead(element);
 }
 
-template <typename T>
+template <Printable T>
 std::optional<T> Stack<T>::pop() {
     return ll->removeHead();
 }
