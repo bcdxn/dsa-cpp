@@ -69,85 +69,113 @@
 //}
 
 
+////---------------------------------------------------------------------------------------
+//// Doubly Linked List Test Harness
+////---------------------------------------------------------------------------------------
+//#include "dlinked-list.hpp"
+//
+//int main(int argc, const char * argv[]) {
+//    using std::cout;
+//
+//    DLinkedList<int> dll{};
+//    cout << dll << '\n';
+//
+//    cout << "---------------------------------------------------------------------------\n";
+//
+//    for (int i = 1; i < 11; i++) {
+//        dll.addHead(i * 10);
+//        cout << dll << '\n';
+//    }
+//    
+//    dll.printInReverse();
+//    
+//    cout << "---------------------------------------------------------------------------\n";
+//
+//    for (int i = 1; i < 11; i++) {
+//        dll.addTail(i * 10);
+//        cout << dll << '\n';
+//    }
+//    
+//    cout << "---------------------------------------------------------------------------\n";
+//    
+//    for (int i = 0; i < 10; i++) {
+//        dll.removeHead();
+//        cout << dll << '\n';
+//    }
+//    
+//    dll.printInReverse();
+//    
+//    cout << "---------------------------------------------------------------------------\n";
+//    
+//    for (int i = 0; i < 10; i++) {
+//        dll.removeTail();
+//        cout << dll << '\n';
+//    }
+//    
+//    cout << "---------------------------------------------------------------------------\n";
+//
+//    std::optional<int> emptyRemoval = dll.removeHead();
+//
+//    if (emptyRemoval) {
+//        cout << "FAILED - removed: " << emptyRemoval.value() << '\n';
+//    } else {
+//        cout << "PASSED - list was empty\n";
+//    }
+//
+//    cout << dll << '\n';
+//
+//    cout << "---------------------------------------------------------------------------\n";
+//
+//    for (int i = 1; i < 6; i++) {
+//        dll.addHead(i * 10);
+//    }
+//    
+//    dll.printInReverse();
+//
+//    cout << dll << '\n';
+//    cout << "Reversing the list:\n";
+//
+//    dll.reverse();
+//    cout << dll << '\n';
+//    
+//    dll.printInReverse();
+//    
+//    cout << "---------------------------------------------------------------------------\n";
+//    cout << "Reversing the list recursively:\n";
+//    dll.reverseRecursive();
+//    cout << dll << '\n';
+//    cout << "---------------------------------------------------------------------------\n";
+//    
+//    dll.printInReverse();
+//
+//    return 0;
+//}
+
+
 //---------------------------------------------------------------------------------------
-// Doubly Linked List Test Harness
+// Queue Test Harness
 //---------------------------------------------------------------------------------------
-#include "dlinked-list.hpp"
+#include "queue.hpp"
+
 
 int main(int argc, const char * argv[]) {
     using std::cout;
-
-    DLinkedList<int> dll{};
-    cout << dll << '\n';
-
-    cout << "---------------------------------------------------------------------------\n";
-
-    for (int i = 1; i < 11; i++) {
-        dll.addHead(i * 10);
-        cout << dll << '\n';
-    }
     
-    dll.printInReverse();
-    
-    cout << "---------------------------------------------------------------------------\n";
-
-    for (int i = 1; i < 11; i++) {
-        dll.addTail(i * 10);
-        cout << dll << '\n';
-    }
-    
-    cout << "---------------------------------------------------------------------------\n";
+    Queue<int> q{};
     
     for (int i = 0; i < 10; i++) {
-        dll.removeHead();
-        cout << dll << '\n';
+        cout << "enqueuing: " << i << std::endl;
+        q.enqueue(i);
+        cout << q << std::endl;
     }
     
-    dll.printInReverse();
-    
-    cout << "---------------------------------------------------------------------------\n";
+    cout << q << std::endl;
     
     for (int i = 0; i < 10; i++) {
-        dll.removeTail();
-        cout << dll << '\n';
+        auto dequeued = q.dequeue();
+        cout << "dequeueing: " << (dequeued.has_value() ? dequeued.value() : -1) << std::endl;
+        cout << q << std::endl;
     }
     
-    cout << "---------------------------------------------------------------------------\n";
-
-    std::optional<int> emptyRemoval = dll.removeHead();
-
-    if (emptyRemoval) {
-        cout << "FAILED - removed: " << emptyRemoval.value() << '\n';
-    } else {
-        cout << "PASSED - list was empty\n";
-    }
-
-    cout << dll << '\n';
-
-    cout << "---------------------------------------------------------------------------\n";
-
-    for (int i = 1; i < 6; i++) {
-        dll.addHead(i * 10);
-    }
-    
-    dll.printInReverse();
-
-    cout << dll << '\n';
-    cout << "Reversing the list:\n";
-
-    dll.reverse();
-    cout << dll << '\n';
-    
-    dll.printInReverse();
-    
-    cout << "---------------------------------------------------------------------------\n";
-    cout << "Reversing the list recursively:\n";
-    dll.reverseRecursive();
-    cout << dll << '\n';
-    cout << "---------------------------------------------------------------------------\n";
-    
-    dll.printInReverse();
-
     return 0;
 }
-
