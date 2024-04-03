@@ -8,6 +8,7 @@
 #ifndef stack_hpp
 #define stack_hpp
 
+#include <iostream>
 #include <optional>
 #include <string>
 
@@ -21,13 +22,15 @@ public:
     Stack<T>();
     ~Stack<T>();
     int getHeight();
-    std::string toString();
     void push(T element);
     std::optional<T> pop();
+    // Enable `std::cout << queue;` syntax
+    friend std::ostream& operator<<(std::ostream& os, Stack<T>& s) {
+        std::cout << "Stack: height(" << s.getHeight() << ")[" << *s.ll << "]";
+        return os;
+    }
 };
 
-template <typename T>
-std::ostream& operator<<(std::ostream& os, Stack<T>& s);
 
 #include "stack.tpp"
 

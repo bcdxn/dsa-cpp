@@ -170,7 +170,7 @@
 //    }
 //    
 //    cout << "---------------------------------------------------------------------------\n";
-//    
+//
 //    for (int i = 0; i < 10; i++) {
 //        auto dequeued = q.dequeue();
 //        cout << "dequeueing: " << (dequeued.has_value() ? dequeued.value() : -1) << std::endl;
@@ -185,7 +185,6 @@
 // Stack Test Harness
 //---------------------------------------------------------------------------------------
 #include "stack.hpp"
-
 
 int main(int argc, const char * argv[]) {
     using std::cout;
@@ -208,3 +207,16 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+////---------------------------------------------------------------------------------------
+//// Binary Search Tree Test Harness
+////---------------------------------------------------------------------------------------
+//#include "bst.hpp"
+//
+//int main(int argc, const char * argv[]) {
+//    using std::cout;
+//    
+//    BST<int> bst{};
+//    
+//    return 0;
+//}

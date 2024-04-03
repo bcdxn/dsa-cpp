@@ -10,38 +10,38 @@
 
 #include "dlinked-list.hpp"
 
-template <typename T>
+template <ComparableAndPrintable T>
 DLinkedListNode<T>::DLinkedListNode(T elem): element(elem) {
     pNext = nullptr;
     pPrev = nullptr;
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 DLinkedListNode<T>::~DLinkedListNode() {
     std::cout << "[DEBUG] " << "DLinkedListNode(" << element << ") Destructor called\n";
     // TODO
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 DLinkedList<T>::DLinkedList() {
     pHead = nullptr;
     pTail = nullptr;
     size = 0;
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 DLinkedList<T>::~DLinkedList() {
     std::cout << "[DEBUG] " << "DLinkedList Destructor called\n";
     // TODO
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 int DLinkedList<T>::getSize() {
     return size;
 }
 
 // Add an element at the head of the list
-template <typename T>
+template <ComparableAndPrintable T>
 void DLinkedList<T>::addHead(T elem) {
     if (!pHead) {
         pHead = new DLinkedListNode<T>(elem);
@@ -57,7 +57,7 @@ void DLinkedList<T>::addHead(T elem) {
 }
 
 // Add an element at the end of the list
-template <typename T>
+template <ComparableAndPrintable T>
 void DLinkedList<T>::addTail(T elem) {
     if (!pTail) {
         // If the list is empty, adding to the head and tail are equivalent
@@ -72,7 +72,7 @@ void DLinkedList<T>::addTail(T elem) {
 }
 
 // Remove an element from the beginning of the list
-template <typename T>
+template <ComparableAndPrintable T>
 std::optional<T> DLinkedList<T>::removeHead() {
     if (!pHead) {
         // The list is empty so we can return
@@ -105,7 +105,7 @@ std::optional<T> DLinkedList<T>::removeHead() {
 }
 
 // Remove an element from the end of the list
-template <typename T>
+template <ComparableAndPrintable T>
 std::optional<T> DLinkedList<T>::removeTail() {
     if (!pTail) {
         // The list is empty so we can return
@@ -135,7 +135,7 @@ std::optional<T> DLinkedList<T>::removeTail() {
     return element;
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 void DLinkedList<T>::reverse() {
     DLinkedListNode<T>* current = pHead;
     
@@ -153,7 +153,7 @@ void DLinkedList<T>::reverse() {
     }
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 DLinkedListNode<T>* DLinkedList<T>::reverseRecursive(DLinkedListNode<T>* head) {
     // base case 1 (an empty list is sorted)
     if (!head) { return head; }
@@ -175,12 +175,12 @@ DLinkedListNode<T>* DLinkedList<T>::reverseRecursive(DLinkedListNode<T>* head) {
     return newHead;
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 void DLinkedList<T>::reverseRecursive() {
     pHead = reverseRecursive(pHead);
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 void DLinkedList<T>::printInReverse() {
     using std::cout;
     
@@ -196,7 +196,7 @@ void DLinkedList<T>::printInReverse() {
     cout << '\n';
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 std::ostream& operator<<(std::ostream& os, DLinkedList<T>& dll) {
     using std::cout;
     

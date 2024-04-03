@@ -8,10 +8,11 @@
 #ifndef linked_list_hpp
 #define linked_list_hpp
 
-#include <stdio.h>
 #include <optional>
 
-template <typename T>
+#include "comparable-printable.hpp"
+
+template <ComparableAndPrintable T>
 class LinkedListNode {
 public:
     T element;
@@ -20,7 +21,7 @@ public:
     ~LinkedListNode();
 };
 
-template <typename T>
+template <ComparableAndPrintable T>
 class LinkedList {
 private:
     int size;
@@ -36,7 +37,7 @@ public:
     void reverseRecursive();
 };
 
-template<typename T>
+template<ComparableAndPrintable T>
 std::ostream& operator<<(std::ostream& os, LinkedList<T> &ll);
 
 #include "linked-list.tpp"

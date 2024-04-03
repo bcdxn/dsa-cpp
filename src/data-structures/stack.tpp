@@ -28,19 +28,6 @@ int Stack<T>::getHeight() {
 }
 
 template <typename T>
-std::string Stack<T>::toString() {
-    std::string str = "";
-    LinkedListNode<T>* node = ll->pHead;
-    
-    while (node) {
-        str += std::to_string(node->element) + " ";
-        node = node->pNext;
-    }
-    
-    return "Stack: height(" + std::to_string(getHeight()) + ")[ " + str + "]";
-}
-
-template <typename T>
 void Stack<T>::push(T element) {
     ll->addHead(element);
 }
@@ -48,10 +35,4 @@ void Stack<T>::push(T element) {
 template <typename T>
 std::optional<T> Stack<T>::pop() {
     return ll->removeHead();
-}
-
-template <typename T>
-std::ostream& operator<<(std::ostream& os, Stack<T>& s) {
-    os << s.toString();
-    return os;
 }

@@ -11,7 +11,9 @@
 #include <iostream>
 #include <optional>
 
-template <typename T>
+#include "comparable-printable.hpp"
+
+template <ComparableAndPrintable T>
 class DLinkedListNode {
 public:
     DLinkedListNode<T>* pNext;
@@ -21,7 +23,7 @@ public:
     ~DLinkedListNode();
 };
 
-template <typename T>
+template <ComparableAndPrintable T>
 class DLinkedList {
 private:
     int size;
@@ -41,7 +43,7 @@ public:
     void printInReverse();
 };
 
-template <typename T>
+template <ComparableAndPrintable T>
 std::ostream& operator<<(std::ostream& os, DLinkedList<T>& dll);
 
 #include "dlinked-list.tpp"

@@ -12,8 +12,9 @@
 #include <string>
 
 #include "dlinked-list.hpp"
+#include "comparable-printable.hpp"
 
-template <typename T>
+template <ComparableAndPrintable T>
 class Queue {
 private:
     DLinkedList<T>* ll = nullptr;
@@ -23,11 +24,12 @@ public:
     int getDepth();
     void enqueue(T element);
     std::optional<T> dequeue();
-    std::string toString();
+    // Enable `std::cout << queue;` syntax
+    friend std::ostream& operator<<(std::ostream& os, Queue<T>& q){
+        os << "Queue: depth(" << q.getDepth() << ")[" << *q.ll << "]";
+        return os;
+    }
 };
-
-template <typename T>
-std::ostream& operator<<(std::ostream& os, Queue<T>& q);
 
 #include "queue.tpp"
 

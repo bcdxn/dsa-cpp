@@ -14,47 +14,28 @@
 #include "queue.hpp"
 
 
-template <typename T>
+template <ComparableAndPrintable T>
 Queue<T>::Queue() {
     ll = new DLinkedList<T>();
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 Queue<T>::~Queue() {
     std::cout << "[DEBUG]" << "Destroying queue\n";
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 int Queue<T>::getDepth() {
     return ll->getSize();
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 void Queue<T>::enqueue(T element) {
     ll->addHead(element);
 }
 
-template <typename T>
+template <ComparableAndPrintable T>
 std::optional<T> Queue<T>::dequeue() {
     return ll->removeTail();
 }
 
-template <typename T>
-std::string Queue<T>::toString() {
-    std::string str = "";
-    
-    DLinkedListNode<T>* node = ll->pHead;
-    
-    while (node) {
-        str += std::to_string(node->element) + " ";
-        node = node->pNext;
-    }
-    
-    return "Queue: depth(" + std::to_string(getDepth()) + ")[ " + str + "]";
-}
-
-template <typename T>
-std::ostream& operator<<(std::ostream& os, Queue<T>& q) {
-    os << q.toString();
-    return os;
-}
