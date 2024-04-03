@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB8A6A922BBC8F4F007A33D3 /* queue.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6A902BBC8F4F007A33D3 /* queue.tpp */; };
 		BB8A6AB02BBC9447007A33D3 /* dlinked-list.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6AAF2BBC9447007A33D3 /* dlinked-list.tpp */; };
+		BB8A6AB32BBCDF46007A33D3 /* stack.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6AB12BBCDF46007A33D3 /* stack.tpp */; };
 		BBE034BB2BBA2EAA0062D008 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034BA2BBA2EAA0062D008 /* main.cpp */; };
 		BBE034CC2BBA35EC0062D008 /* linked-list.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034CA2BBA35EC0062D008 /* linked-list.tpp */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,8 @@
 		BB8A6A902BBC8F4F007A33D3 /* queue.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = queue.tpp; sourceTree = "<group>"; };
 		BB8A6A912BBC8F4F007A33D3 /* queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = queue.hpp; sourceTree = "<group>"; };
 		BB8A6AAF2BBC9447007A33D3 /* dlinked-list.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = "dlinked-list.tpp"; sourceTree = "<group>"; };
+		BB8A6AB12BBCDF46007A33D3 /* stack.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = stack.tpp; sourceTree = "<group>"; };
+		BB8A6AB22BBCDF46007A33D3 /* stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stack.hpp; sourceTree = "<group>"; };
 		BBC3819A2BBC353E0087666F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BBE034B72BBA2EAA0062D008 /* data-structures-and-algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "data-structures-and-algorithms"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE034BA2BBA2EAA0062D008 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				BBE034CE2BBA4CA50062D008 /* dlinked-list.hpp */,
 				BB8A6A902BBC8F4F007A33D3 /* queue.tpp */,
 				BB8A6A912BBC8F4F007A33D3 /* queue.hpp */,
+				BB8A6AB12BBCDF46007A33D3 /* stack.tpp */,
+				BB8A6AB22BBCDF46007A33D3 /* stack.hpp */,
 			);
 			path = "data-structures";
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				BBE034CC2BBA35EC0062D008 /* linked-list.tpp in Sources */,
 				BB8A6AB02BBC9447007A33D3 /* dlinked-list.tpp in Sources */,
 				BBE034BB2BBA2EAA0062D008 /* main.cpp in Sources */,
+				BB8A6AB32BBCDF46007A33D3 /* stack.tpp in Sources */,
 				BB8A6A922BBC8F4F007A33D3 /* queue.tpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -152,29 +152,58 @@
 //}
 
 
+////---------------------------------------------------------------------------------------
+//// Queue Test Harness
+////---------------------------------------------------------------------------------------
+//#include "queue.hpp"
+//
+//
+//int main(int argc, const char * argv[]) {
+//    using std::cout;
+//    
+//    Queue<int> q{};
+//    
+//    for (int i = 0; i < 10; i++) {
+//        cout << "enqueuing: " << i << std::endl;
+//        q.enqueue(i);
+//        cout << q << std::endl;
+//    }
+//    
+//    cout << "---------------------------------------------------------------------------\n";
+//    
+//    for (int i = 0; i < 10; i++) {
+//        auto dequeued = q.dequeue();
+//        cout << "dequeueing: " << (dequeued.has_value() ? dequeued.value() : -1) << std::endl;
+//        cout << q << std::endl;
+//    }
+//    
+//    return 0;
+//}
+
+
 //---------------------------------------------------------------------------------------
-// Queue Test Harness
+// Stack Test Harness
 //---------------------------------------------------------------------------------------
-#include "queue.hpp"
+#include "stack.hpp"
 
 
 int main(int argc, const char * argv[]) {
     using std::cout;
     
-    Queue<int> q{};
+    Stack<int> stk{};
     
     for (int i = 0; i < 10; i++) {
-        cout << "enqueuing: " << i << std::endl;
-        q.enqueue(i);
-        cout << q << std::endl;
+        cout << "pushing: " << i << std::endl;
+        stk.push(i);
+        cout << stk << std::endl;
     }
     
-    cout << q << std::endl;
-    
+    cout << "---------------------------------------------------------------------------\n";
+
     for (int i = 0; i < 10; i++) {
-        auto dequeued = q.dequeue();
-        cout << "dequeueing: " << (dequeued.has_value() ? dequeued.value() : -1) << std::endl;
-        cout << q << std::endl;
+        auto popped = stk.pop();
+        cout << "popping: " << (popped.has_value() ? popped.value() : -1) << std::endl;
+        cout << stk << std::endl;
     }
     
     return 0;
