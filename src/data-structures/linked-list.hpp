@@ -27,8 +27,8 @@ private:
     LinkedListNode<T>* reverseRecursive(LinkedListNode<T>* head);
 public:
     LinkedListNode<T>* pHead;
-    LinkedList();
-    ~LinkedList();
+    LinkedList<T>();
+    ~LinkedList<T>();
     int getSize();
     void addHead(T elem);
     std::optional<T> removeHead();

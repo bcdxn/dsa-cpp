@@ -29,8 +29,8 @@ private:
 public:
     DLinkedListNode<T>* pHead;
     DLinkedListNode<T>* pTail;
-    DLinkedList();
-    ~DLinkedList();
+    DLinkedList<T>();
+    ~DLinkedList<T>();
     int getSize();
     void addHead(T elem);
     void addTail(T elem);
