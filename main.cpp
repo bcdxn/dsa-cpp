@@ -11,13 +11,15 @@
 #include <harnesses/queue.h>
 #include <harnesses/stack.h>
 #include <harnesses/bst.h>
+#include <harnesses/avl-tree.h>
 
 int main() {
 //    runLinkedListHarness();
 //    runDLinkedListHarness();
 //    runQueueHarness();
 //    runStackHarness();
-    runBstHarness();
+//    runBstHarness();
+    runAVLTreeHarness();
     return 0;
 }
 

@@ -16,6 +16,8 @@
 		BB8A6AC12BBD9F29007A33D3 /* queue.h in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6AC02BBD9F29007A33D3 /* queue.h */; };
 		BB8A6AC32BBD9FED007A33D3 /* stack.h in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6AC22BBD9FED007A33D3 /* stack.h */; };
 		BB8A6AC52BBDE91F007A33D3 /* bst.h in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6AC42BBDE91F007A33D3 /* bst.h */; };
+		BB8A6AC82BC21882007A33D3 /* avl-tree.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6AC62BC21881007A33D3 /* avl-tree.tpp */; };
+		BB8A6ACA2BC21C35007A33D3 /* avl-tree.h in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6AC92BC21C35007A33D3 /* avl-tree.h */; };
 		BBE034BB2BBA2EAA0062D008 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034BA2BBA2EAA0062D008 /* main.cpp */; };
 		BBE034CC2BBA35EC0062D008 /* linked-list.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034CA2BBA35EC0062D008 /* linked-list.tpp */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,9 @@
 		BB8A6AC02BBD9F29007A33D3 /* queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
 		BB8A6AC22BBD9FED007A33D3 /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
 		BB8A6AC42BBDE91F007A33D3 /* bst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bst.h; sourceTree = "<group>"; };
+		BB8A6AC62BC21881007A33D3 /* avl-tree.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = "avl-tree.tpp"; sourceTree = "<group>"; };
+		BB8A6AC72BC21881007A33D3 /* avl-tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "avl-tree.hpp"; sourceTree = "<group>"; };
+		BB8A6AC92BC21C35007A33D3 /* avl-tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "avl-tree.h"; sourceTree = "<group>"; };
 		BBC3819A2BBC353E0087666F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BBE034B72BBA2EAA0062D008 /* data-structures-and-algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "data-structures-and-algorithms"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE034BA2BBA2EAA0062D008 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 				BB8A6AC02BBD9F29007A33D3 /* queue.h */,
 				BB8A6AC22BBD9FED007A33D3 /* stack.h */,
 				BB8A6AC42BBDE91F007A33D3 /* bst.h */,
+				BB8A6AC92BC21C35007A33D3 /* avl-tree.h */,
 			);
 			path = harnesses;
 			sourceTree = "<group>";
@@ -118,6 +124,8 @@
 				BB8A6AB42BBCE975007A33D3 /* bst.tpp */,
 				BB8A6AB52BBCE975007A33D3 /* bst.hpp */,
 				BB8A6AB82BBCEF76007A33D3 /* comparable-printable.hpp */,
+				BB8A6AC62BC21881007A33D3 /* avl-tree.tpp */,
+				BB8A6AC72BC21881007A33D3 /* avl-tree.hpp */,
 			);
 			path = "data-structures";
 			sourceTree = "<group>";
@@ -180,8 +188,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBE034CC2BBA35EC0062D008 /* linked-list.tpp in Sources */,
+				BB8A6AC82BC21882007A33D3 /* avl-tree.tpp in Sources */,
 				BB8A6AB02BBC9447007A33D3 /* dlinked-list.tpp in Sources */,
 				BBE034BB2BBA2EAA0062D008 /* main.cpp in Sources */,
+				BB8A6ACA2BC21C35007A33D3 /* avl-tree.h in Sources */,
 				BB8A6AB62BBCE975007A33D3 /* bst.tpp in Sources */,
 				BB8A6AC52BBDE91F007A33D3 /* bst.h in Sources */,
 				BB8A6ABD2BBD93CC007A33D3 /* linked-list.h in Sources */,
