@@ -12,6 +12,7 @@
 #include <harnesses/stack.h>
 #include <harnesses/bst.h>
 #include <harnesses/avl-tree.h>
+#include <harnesses/hash-table.h>
 
 int main() {
 //    runLinkedListHarness();
@@ -19,7 +20,8 @@ int main() {
 //    runQueueHarness();
 //    runStackHarness();
 //    runBstHarness();
-    runAVLTreeHarness();
+//    runAVLTreeHarness();
+    runHashTableHarness();
     return 0;
 }
 
