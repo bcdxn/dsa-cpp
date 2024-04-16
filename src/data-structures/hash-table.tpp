@@ -27,32 +27,36 @@ int HashTable::getHash(std::string item) {
     return hash;
 }
 
+int HashTable::getIndex(std::string item, std::vector<LinkedList<std::string>>* t) {
+    // Calculate Hash
+    int hash = getHash(item);
+    // Calculate index into table
+    return hash % t->size();
+}
+
 bool HashTable::isFillFactorExceeded() {
     float ff = (float)filled / (float)table->size();
     
     return ff >= 0.5;
 }
 
-void HashTable::hashHelper(std::string item, std::vector<LinkedList<std::string>>* t) {
-    // Calculate Hash
-    int hash = getHash(item);
-    // Calculate index into table
-    int index = hash % t->size();
-    // Add item to the hash table
-    t->at(index).addHead(item);
-}
-
 void HashTable::resize() {
+    std::cout << "[DEBUG] " << "Resizing hashtable" << std::endl;
+    
     int growthFactor = 2;
     int newSize = (int)table->size() * growthFactor;
     std::vector<LinkedList<std::string>>* newTable = new std::vector<LinkedList<std::string>>();
     newTable->resize(newSize);
     
+    // For each item in the old table we must rehash and add to the new table
     for (int i = 0; i < table->size(); i++) {
         auto node = table->at(i).pHead;
         
         while (node) {
-            hashHelper(node->element, newTable);
+            // calculate index in table
+            int index = getIndex(node->element, newTable);
+            // Add item to the hash table
+            newTable->at(index).addHead(node->element);
             node = node->pNext;
         }
     }
@@ -77,8 +81,15 @@ void HashTable::add(std::string item) {
     if (isFillFactorExceeded()) {
         resize();
     }
-    
-    hashHelper(item, table);
+    int index = getIndex(item, table);
+    // Add item to the hash table
+    table->at(index).addHead(item);
     
     filled++;
+}
+
+bool HashTable::contains(std::string item) {
+    int index = getIndex(item, table);
+    
+    return table->at(index).getSize() > 0;
 }

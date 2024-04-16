@@ -16,4 +16,8 @@ void runHashTableHarness() {
     
     ht.add("hello");
     ht.add("hi");
+    
+    std::cout << "contains 'hi': " << ht.contains("hi") << std::endl;
+    std::cout << "contains 'hello': " << ht.contains("hello") << std::endl;
+    std::cout << "contains 'wat': " << ht.contains("wat") << std::endl;
 }
