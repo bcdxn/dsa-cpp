@@ -20,6 +20,8 @@
 		BB8A6ACA2BC21C35007A33D3 /* avl-tree.h in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6AC92BC21C35007A33D3 /* avl-tree.h */; };
 		BB8A6ACD2BC61383007A33D3 /* hash-table.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6ACB2BC61383007A33D3 /* hash-table.tpp */; };
 		BB8A6ACF2BC614FA007A33D3 /* hash-table.h in Sources */ = {isa = PBXBuildFile; fileRef = BB8A6ACE2BC614FA007A33D3 /* hash-table.h */; };
+		BB9DD7CA2BCEB71B0025C841 /* min-heap.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9DD7C82BCEB71B0025C841 /* min-heap.tpp */; };
+		BB9DD7CC2BCEB85F0025C841 /* min-heap.h in Sources */ = {isa = PBXBuildFile; fileRef = BB9DD7CB2BCEB85F0025C841 /* min-heap.h */; };
 		BBE034BB2BBA2EAA0062D008 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034BA2BBA2EAA0062D008 /* main.cpp */; };
 		BBE034CC2BBA35EC0062D008 /* linked-list.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034CA2BBA35EC0062D008 /* linked-list.tpp */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,9 @@
 		BB8A6ACB2BC61383007A33D3 /* hash-table.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = "hash-table.tpp"; sourceTree = "<group>"; };
 		BB8A6ACC2BC61383007A33D3 /* hash-table.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "hash-table.hpp"; sourceTree = "<group>"; };
 		BB8A6ACE2BC614FA007A33D3 /* hash-table.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hash-table.h"; sourceTree = "<group>"; };
+		BB9DD7C82BCEB71B0025C841 /* min-heap.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = "min-heap.tpp"; sourceTree = "<group>"; };
+		BB9DD7C92BCEB71B0025C841 /* min-heap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "min-heap.hpp"; sourceTree = "<group>"; };
+		BB9DD7CB2BCEB85F0025C841 /* min-heap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "min-heap.h"; sourceTree = "<group>"; };
 		BBC3819A2BBC353E0087666F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BBE034B72BBA2EAA0062D008 /* data-structures-and-algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "data-structures-and-algorithms"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE034BA2BBA2EAA0062D008 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -85,6 +90,7 @@
 				BB8A6AC42BBDE91F007A33D3 /* bst.h */,
 				BB8A6AC92BC21C35007A33D3 /* avl-tree.h */,
 				BB8A6ACE2BC614FA007A33D3 /* hash-table.h */,
+				BB9DD7CB2BCEB85F0025C841 /* min-heap.h */,
 			);
 			path = harnesses;
 			sourceTree = "<group>";
@@ -134,6 +140,8 @@
 				BB8A6AC72BC21881007A33D3 /* avl-tree.hpp */,
 				BB8A6ACB2BC61383007A33D3 /* hash-table.tpp */,
 				BB8A6ACC2BC61383007A33D3 /* hash-table.hpp */,
+				BB9DD7C82BCEB71B0025C841 /* min-heap.tpp */,
+				BB9DD7C92BCEB71B0025C841 /* min-heap.hpp */,
 			);
 			path = "data-structures";
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 				BBE034CC2BBA35EC0062D008 /* linked-list.tpp in Sources */,
 				BB8A6AC82BC21882007A33D3 /* avl-tree.tpp in Sources */,
 				BB8A6AB02BBC9447007A33D3 /* dlinked-list.tpp in Sources */,
+				BB9DD7CC2BCEB85F0025C841 /* min-heap.h in Sources */,
 				BBE034BB2BBA2EAA0062D008 /* main.cpp in Sources */,
 				BB8A6ACA2BC21C35007A33D3 /* avl-tree.h in Sources */,
 				BB8A6AB62BBCE975007A33D3 /* bst.tpp in Sources */,
@@ -207,6 +216,7 @@
 				BB8A6AC12BBD9F29007A33D3 /* queue.h in Sources */,
 				BB8A6ABF2BBD9E04007A33D3 /* dlinked-list.h in Sources */,
 				BB8A6AB32BBCDF46007A33D3 /* stack.tpp in Sources */,
+				BB9DD7CA2BCEB71B0025C841 /* min-heap.tpp in Sources */,
 				BB8A6ACF2BC614FA007A33D3 /* hash-table.h in Sources */,
 				BB8A6AC32BBD9FED007A33D3 /* stack.h in Sources */,
 				BB8A6A922BBC8F4F007A33D3 /* queue.tpp in Sources */,

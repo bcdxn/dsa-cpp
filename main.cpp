@@ -13,6 +13,7 @@
 #include <harnesses/bst.h>
 #include <harnesses/avl-tree.h>
 #include <harnesses/hash-table.h>
+#include <harnesses/min-heap.h>
 
 int main() {
 //    runLinkedListHarness();
@@ -21,7 +22,8 @@ int main() {
 //    runStackHarness();
 //    runBstHarness();
 //    runAVLTreeHarness();
-    runHashTableHarness();
+//    runHashTableHarness();
+    runMinHeapHarness();
     return 0;
 }
 
