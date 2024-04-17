@@ -5,10 +5,10 @@
 - [x] Linked List
 - [x] Queue (FIFO)
 - [x] Stack (LIFO)
-- [ ] Hash Map
-- [ ] Hash Map + Collision Handling
+- [x] Hash Map
+- [x] Hash Map + Collision Handling
 - [x] BST
-- [ ] Heap
+- [x] Heap
 - [x] AVL
 - [ ] Graph
 
