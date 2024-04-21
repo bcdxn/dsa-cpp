@@ -6,6 +6,8 @@
 //
 
 #include <iostream>
+#include <vector>
+
 #include <harnesses/linked-list.h>
 #include <harnesses/dlinked-list.h>
 #include <harnesses/queue.h>
@@ -14,6 +16,7 @@
 #include <harnesses/avl-tree.h>
 #include <harnesses/hash-table.h>
 #include <harnesses/min-heap.h>
+#include "sorting-searching/bubble-sort.hpp"
 
 int main() {
 //    runLinkedListHarness();
@@ -23,7 +26,18 @@ int main() {
 //    runBstHarness();
 //    runAVLTreeHarness();
 //    runHashTableHarness();
-    runMinHeapHarness();
+//    runMinHeapHarness();
+    
+    std::vector<int> arry = {8, 4, 5, 9, 10, 100, 50, 43, 12};
+    
+    std::vector<int> sorted = bubbleSort(arry);
+    
+    std::cout << "[ ";
+    for (int i = 0; i < sorted.size(); i++) {
+        std::cout << sorted[i] << " ";
+    }
+    std::cout << "]" << std::endl;
+    
     return 0;
 }
 

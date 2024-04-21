@@ -15,7 +15,7 @@
 ## Algorithms
 
 - [ ] Binary Search
-- [ ] Bubble Sort
+- [x] Bubble Sort
 - [ ] Quick Sort
 - [ ] Insertion Sort
 - [ ] Shell Sort
