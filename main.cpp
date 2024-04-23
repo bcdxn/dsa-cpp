@@ -17,6 +17,7 @@
 #include <harnesses/hash-table.h>
 #include <harnesses/min-heap.h>
 #include "sorting-searching/bubble-sort.hpp"
+#include "sorting-searching/insertion-sort.hpp"
 
 int main() {
 //    runLinkedListHarness();
@@ -30,7 +31,9 @@ int main() {
     
     std::vector<int> arry = {8, 4, 5, 9, 10, 100, 50, 43, 12};
     
-    std::vector<int> sorted = bubbleSort(arry);
+//    std::vector<int> sorted = bubbleSort(arry);
+    std::vector<int> sorted = insertionSort(arry);
+    
     
     std::cout << "[ ";
     for (int i = 0; i < sorted.size(); i++) {
