@@ -24,6 +24,7 @@
 		BB9DD7CC2BCEB85F0025C841 /* min-heap.h in Sources */ = {isa = PBXBuildFile; fileRef = BB9DD7CB2BCEB85F0025C841 /* min-heap.h */; };
 		BB9DD7CF2BD5840E0025C841 /* bubble-sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9DD7CE2BD5840E0025C841 /* bubble-sort.cpp */; };
 		BB9DD7D52BD73BD10025C841 /* insertion-sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9DD7D32BD73BD10025C841 /* insertion-sort.cpp */; };
+		BB9DD7D82BD740470025C841 /* merge-sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9DD7D62BD740470025C841 /* merge-sort.cpp */; };
 		BBE034BB2BBA2EAA0062D008 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034BA2BBA2EAA0062D008 /* main.cpp */; };
 		BBE034CC2BBA35EC0062D008 /* linked-list.tpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE034CA2BBA35EC0062D008 /* linked-list.tpp */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,8 @@
 		BB9DD7D12BD588580025C841 /* bubble-sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "bubble-sort.hpp"; sourceTree = "<group>"; };
 		BB9DD7D32BD73BD10025C841 /* insertion-sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "insertion-sort.cpp"; sourceTree = "<group>"; };
 		BB9DD7D42BD73BD10025C841 /* insertion-sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "insertion-sort.hpp"; sourceTree = "<group>"; };
+		BB9DD7D62BD740470025C841 /* merge-sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "merge-sort.cpp"; sourceTree = "<group>"; };
+		BB9DD7D72BD740470025C841 /* merge-sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "merge-sort.hpp"; sourceTree = "<group>"; };
 		BBC3819A2BBC353E0087666F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BBE034B72BBA2EAA0062D008 /* data-structures-and-algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "data-structures-and-algorithms"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE034BA2BBA2EAA0062D008 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				BB9DD7D12BD588580025C841 /* bubble-sort.hpp */,
 				BB9DD7D32BD73BD10025C841 /* insertion-sort.cpp */,
 				BB9DD7D42BD73BD10025C841 /* insertion-sort.hpp */,
+				BB9DD7D62BD740470025C841 /* merge-sort.cpp */,
+				BB9DD7D72BD740470025C841 /* merge-sort.hpp */,
 			);
 			path = "sorting-searching";
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 				BB8A6ABF2BBD9E04007A33D3 /* dlinked-list.h in Sources */,
 				BB8A6AB32BBCDF46007A33D3 /* stack.tpp in Sources */,
 				BB9DD7CA2BCEB71B0025C841 /* min-heap.tpp in Sources */,
+				BB9DD7D82BD740470025C841 /* merge-sort.cpp in Sources */,
 				BB8A6ACF2BC614FA007A33D3 /* hash-table.h in Sources */,
 				BB8A6AC32BBD9FED007A33D3 /* stack.h in Sources */,
 				BB8A6A922BBC8F4F007A33D3 /* queue.tpp in Sources */,
