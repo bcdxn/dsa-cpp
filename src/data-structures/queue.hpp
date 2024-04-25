@@ -2,8 +2,6 @@
 //  queue.hpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/2/24.
-//
 
 #ifndef queue_hpp
 #define queue_hpp

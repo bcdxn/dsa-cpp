@@ -2,8 +2,6 @@
 //  dlinked-list.cpp
 //  Data Structures and Algorithms
 //
-//  Created by Benjamin Dixon on 3/31/24.
-//
 
 #include <iostream>
 #include <optional>

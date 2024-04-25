@@ -2,8 +2,6 @@
 //  comparable-printable.hpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/2/24.
-//
 
 #ifndef comparable_printable_hpp
 #define comparable_printable_hpp

@@ -2,8 +2,6 @@
 //  dlinked-list.cpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/3/24.
-//
 
 //---------------------------------------------------------------------------------------
 // Doubly Linked List Test Harness

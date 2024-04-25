@@ -2,8 +2,6 @@
 //  stack.h
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/3/24.
-//
 
 //---------------------------------------------------------------------------------------
 // Stack Test Harness

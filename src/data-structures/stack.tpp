@@ -2,8 +2,6 @@
 //  stack.cpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/2/24.
-//
 
 #include <iostream>
 #include <optional>

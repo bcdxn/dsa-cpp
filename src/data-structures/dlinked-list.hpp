@@ -2,8 +2,6 @@
 //  dlinked-list.hpp
 //  Data Structures and Algorithms
 //
-//  Created by Benjamin Dixon on 3/31/24.
-//
 
 #ifndef dlinked_list_hpp
 #define dlinked_list_hpp

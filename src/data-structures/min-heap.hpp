@@ -2,8 +2,6 @@
 //  min-heap.hpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/16/24.
-//
 
 #ifndef min_heap_hpp
 #define min_heap_hpp

@@ -2,8 +2,6 @@
 //  main.cpp
 //  Data Structures and Algorithms
 //
-//  Created by Benjamin Dixon on 3/31/24.
-//
 
 #include <iostream>
 #include <vector>
@@ -19,6 +17,7 @@
 #include "sorting-searching/bubble-sort.hpp"
 #include "sorting-searching/insertion-sort.hpp"
 #include "sorting-searching/merge-sort.hpp"
+#include "sorting-searching/quick-sort.hpp"
 
 int main() {
 //    runLinkedListHarness();
@@ -34,7 +33,8 @@ int main() {
     
 //    std::vector<int> sorted = bubbleSort(arry);
 //    std::vector<int> sorted = insertionSort(arry);
-    std::vector<int> sorted = mergeSort(arry);
+//    std::vector<int> sorted = mergeSort(arry);
+    std::vector<int> sorted = quickSort(arry);
     
     
     std::cout << "[ ";

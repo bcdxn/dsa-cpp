@@ -2,8 +2,6 @@
 //  bst.hpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/2/24.
-//
 
 #ifndef bst_hpp
 #define bst_hpp

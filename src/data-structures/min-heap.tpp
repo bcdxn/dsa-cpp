@@ -2,8 +2,6 @@
 //  min-heap.cpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/16/24.
-//
 
 #include <iostream>
 #include <vector>

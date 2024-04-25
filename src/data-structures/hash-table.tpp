@@ -2,8 +2,6 @@
 //  hash-table.cpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/9/24.
-//
 
 #include <vector>
 #include <iostream>

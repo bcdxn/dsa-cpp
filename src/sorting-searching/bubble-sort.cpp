@@ -2,8 +2,6 @@
 //  bubble-sort.cpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/21/24.
-//
 
 #include <vector>
 #include <utility>

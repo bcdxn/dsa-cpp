@@ -2,8 +2,6 @@
 //  linked-list.hpp
 //  Data Structures and Algorithms
 //
-//  Created by Benjamin Dixon on 3/31/24.
-//
 
 #ifndef linked_list_hpp
 #define linked_list_hpp

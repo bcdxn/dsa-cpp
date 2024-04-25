@@ -2,8 +2,6 @@
 //  merge-sort.cpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/22/24.
-//
 
 #include <cmath>
 #include <vector>

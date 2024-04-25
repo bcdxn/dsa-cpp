@@ -2,8 +2,6 @@
 //  hash-table.hpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/9/24.
-//
 
 #ifndef hash_table_hpp
 #define hash_table_hpp

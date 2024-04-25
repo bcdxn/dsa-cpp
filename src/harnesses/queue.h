@@ -2,8 +2,6 @@
 //  queue.cpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/3/24.
-//
 
 //---------------------------------------------------------------------------------------
 // Queue Test Harness

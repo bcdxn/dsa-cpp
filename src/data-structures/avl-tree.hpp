@@ -2,8 +2,6 @@
 //  avl-tree.hpp
 //  data-structures-and-algorithms
 //
-//  Created by Benjamin Dixon on 4/6/24.
-//
 
 #ifndef avl_tree_hpp
 #define avl_tree_hpp
