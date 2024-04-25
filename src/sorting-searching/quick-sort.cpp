@@ -64,6 +64,16 @@ void quickSort(std::vector<int>* a, int start, int end) {
     // else { base case - an array of length 1 or less is implicitly sorted }
 }
 
+/*
+ Worst: O(N^2) --> occurs when array is sorted and you pick a bad pivot (lowest or highest)
+ Average: O(N*log(N))
+ Best: O(N*log(N))
+ 
+ Memory requirements - O(log(N)) - better than merge sort's O(N)
+ 
+ Pick a pivot, partition the array around the pivot; recursively
+ partition the left and right partition
+ */
 std::vector<int> quickSort(std::vector<int> a) {
     quickSort(&a, 0, (int)a.size() - 1);
     

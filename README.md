@@ -17,6 +17,6 @@
 - [ ] Binary Search
 - [x] Bubble Sort
 - [x] Insertion Sort
-- [ ] Merge Sort 
-- [ ] Quick Sort
+- [x] Merge Sort 
+- [x] Quick Sort
 - [ ] Shell Sort
